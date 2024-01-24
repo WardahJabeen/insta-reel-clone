@@ -1,3 +1,50 @@
+html {
+  /* need it for scrolling functionality */
+  scroll-snap-type: y mandatory;
+}
+
+.app {
+  /* centers everything veritcall and horizontally */
+  display: grid;
+  /* centers horizontally */
+  place-items: center;
+  /* centers vertically */
+  height: 100vh;
+  background-color: black;
+}
+
+.top {
+  margin-bottom: -100px;
+}
+
+.top>h1 {
+  text-align: center;
+  color: white;
+}
+
 .logo {
   height: 12vh;
+}
+
+.videos {
+  position: relative;
+  height: 65vh;
+  background-color: white;
+  width: 70%;
+  border-radius: 20px;
+  max-width: 450px;
+  max-height: 1200px;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* hides the scroll bar from chrome, safari, and opera */
+.videos::-webkit-scrollbar {
+  display: none;
+}
+
+/* hides scrollbar from IE, Edge and then Firefox */
+.videos {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
